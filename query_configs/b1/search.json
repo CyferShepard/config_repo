@@ -1,7 +1,7 @@
 {
     "query": [
         {
-            "label": "albumn title",
+            "label": "album title",
             "element": "h1.truncate",
             "getContent": true
         },
