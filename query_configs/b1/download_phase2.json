@@ -1,0 +1,22 @@
+[
+    {
+        "label": "title",
+        "element": ".text-subs",
+        "getContent": true
+    },
+    {
+        "label": "size",
+        "element": "p",
+        "getContent": true
+    },
+    {
+        "label": "video_url",
+        "element": "video>source",
+        "withHref": true
+    },
+    {
+        "label": "img_url",
+        "element": "main>figure>img.max-h-full",
+        "withHref": true
+    }
+]

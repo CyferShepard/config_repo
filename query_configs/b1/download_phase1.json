@@ -1,0 +1,17 @@
+[
+    {
+        "label": "title",
+        "element": ".text-subs",
+        "getContent": true
+    },
+    {
+        "label": "size",
+        "element": "p",
+        "getContent": true
+    },
+    {
+        "label": "url",
+        "element": ".btn.btn-main",
+        "withHref": true
+    }
+]

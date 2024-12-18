@@ -1,0 +1,43 @@
+[
+    {
+        "label": "albumn title",
+        "element": "h1.truncate",
+        "getContent": true
+    },
+    {
+        "label": "info",
+        "element": ".text-xs.visitors",
+        "getContent": true
+    },
+    {
+        "label": "files",
+        "element": ".theItem",
+        "subQuery": [
+            {
+                "label": "title",
+                "element": ".grid-images_box-txt>p",
+                "getContent": true
+            },
+            {
+                "label": "thumb_url",
+                "element": ".grid-images_box-img",
+                "withHref": true
+            },
+            {
+                "label": "url",
+                "element": ".theItem>div>a",
+                "withHref": true
+            },
+            {
+                "label": "size",
+                "element": ".theSize",
+                "getContent": true
+            },
+            {
+                "label": "date",
+                "element": ".ic-clock",
+                "getContent": true
+            }
+        ]
+    }
+]
