@@ -1,52 +1,48 @@
-
-{
-    "url": "https://novelbuddy.io/search?q=return",
-    "query": [
-        {
-            "label": "results",
-            "element": ".book-item",
-            "subQuery": [
-                {
-                    "label": "url",
-                    "element": ".meta>.title>h3>a",
-                    "withHref": true
-                },
-                {
-                    "label": "title",
-                    "element": ".meta>.title>h3>a",
-                    "getContent": true
-                },
-                {
-                    "label": "summary",
-                    "element": ".meta>.summary>p",
-                    "getContent": true
-                },
-                {
-                    "label": "views",
-                    "element": ".meta>.views>span",
-                    "getContent": true
-                },
-                {
-                    "label": "rating",
-                    "element": ".meta>.rating>.score",
-                    "getContent": true
-                },
-                {
-                    "label": "maxrating",
-                    "element": ".meta>.rating>.max-ratings",
-                    "getContent": true
-                },
-                {
-                    "label": "genres",
-                    "element": ".meta>.genres>span",
-                    "getContent": true
-                },
-                {
-                    "label": "thumb_url",
-                    "element": ".book-detailed-item>.thumb>a>img",
-                    "withHref": true
-                }
-            ]
+ScraperPayload {
+  url: "https://novelbuddy.io/search?q=",
+  query: [
+    ScraperQuery {
+      label: "results",
+      element: ".book-item",
+      getContent: true,
+      withHref: false,
+      subQuery: [
+        ScraperQuery {
+          label: "url",
+          element: ".meta>.title>h3>a",
+          getContent: true,
+          withHref: true,
+          subQuery: undefined
+        },
+        ScraperQuery {
+          label: "title",
+          element: ".meta>.title>h3>a",
+          getContent: true,
+          withHref: false,
+          subQuery: undefined
+        },
+        ScraperQuery {
+          label: "summary",
+          element: ".meta>.summary>p",
+          getContent: true,
+          withHref: false,
+          subQuery: undefined
+        },
+        ScraperQuery {
+          label: "cover",
+          element: ".book-detailed-item>.thumb>a>img",
+          getContent: true,
+          withHref: true,
+          subQuery: undefined
+        },
+        ScraperQuery {
+          label: "genres",
+          element: ".meta>.genres>span",
+          getContent: true,
+          withHref: false,
+          subQuery: undefined
         }
-    ]
+      ]
+    }
+  ]
 }
