@@ -1,1 +1,52 @@
 
+{
+    "url": "https://novelbuddy.io/search?q=return",
+    "query": [
+        {
+            "label": "results",
+            "element": ".book-item",
+            "subQuery": [
+                {
+                    "label": "url",
+                    "element": ".meta>.title>h3>a",
+                    "withHref": true
+                },
+                {
+                    "label": "title",
+                    "element": ".meta>.title>h3>a",
+                    "getContent": true
+                },
+                {
+                    "label": "summary",
+                    "element": ".meta>.summary>p",
+                    "getContent": true
+                },
+                {
+                    "label": "views",
+                    "element": ".meta>.views>span",
+                    "getContent": true
+                },
+                {
+                    "label": "rating",
+                    "element": ".meta>.rating>.score",
+                    "getContent": true
+                },
+                {
+                    "label": "maxrating",
+                    "element": ".meta>.rating>.max-ratings",
+                    "getContent": true
+                },
+                {
+                    "label": "genres",
+                    "element": ".meta>.genres>span",
+                    "getContent": true
+                },
+                {
+                    "label": "thumb_url",
+                    "element": ".book-detailed-item>.thumb>a>img",
+                    "withHref": true
+                }
+            ]
+        }
+    ]
+}
