@@ -1,0 +1,43 @@
+{
+  "url": "https://novelbuddy.io/novel/${0}",
+  "query": [
+    {
+      "label": "title",
+      "element": ".detail>.name.box>h1",
+      "getContent": true,
+      "withHref": false
+    },
+    {
+      "label": "summary",
+      "element": ".summary>p",
+      "getContent": true,
+      "withHref": false
+    },
+    {
+      "label": "tags",
+      "element": ".tags>a",
+      "getContent": true,
+      "withHref": false
+    },
+    {
+      "label": "details",
+      "element": ".detail>.meta.box>p",
+      "getContent": true,
+      "withHref": false,
+      "subQuery": [
+        {
+          "label": "field",
+          "element": "strong",
+          "getContent": true,
+          "withHref": false
+        },
+        {
+          "label": "value",
+          "element": "span",
+          "getContent": true,
+          "withHref": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 {
-  "url": "https://novelbuddy.io/api/manga/${itemId}/chapters?source=detail",
+  "url": "https://novelbuddy.io/api/manga/${0}/chapters?source=detail",
   "query": [
     {
       "label": "chapters",
@@ -7,9 +7,24 @@
       "getContent": true,
       "withHref": false,
       "subQuery": [
-        { "label": "url", "element": "a", "getContent": true, "withHref": true },
-        { "label": "title", "element": ".chapter-title", "getContent": true, "withHref": false },
-        { "label": "date", "element": ".chapter-update", "getContent": true, "withHref": false }
+        {
+          "label": "url",
+          "element": "a",
+          "getContent": true,
+          "withHref": true
+        },
+        {
+          "label": "title",
+          "element": ".chapter-title",
+          "getContent": true,
+          "withHref": false
+        },
+        {
+          "label": "date",
+          "element": ".chapter-update",
+          "getContent": true,
+          "withHref": false
+        }
       ]
     }
   ]
